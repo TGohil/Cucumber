@@ -1,0 +1,8 @@
+@page = GoogleHomePage.new(@boo)
+@page.class
+@page.methods
+@page.title
+@page.visit
+@page.search_box = "Hello"
+@page.search_box
+@page.search_button.click

@@ -1,15 +1,19 @@
 # Step Definitions
 
 Given(/^I'm on the google homepage$/) do
-  @b.goto "google.com"
+  @page = GoogleHomePage.new @boo
+  binding.pry
+  #@b.goto "google.com"
 end
 
 When(/^I enter "(.*?)" into the search box$/) do |search_term|
-  @b.text_field(:id, "gbqfq").set search_term
+  @page.search_box = "hello"
+  #@b.text_field(:id, "gbqfq").set search_term
 end
 
 When(/^I press go$/) do
-  @b.button(:id, "gbqfb").when_present.click
+  @page.search_button.click
+  #@b.button(:id, "gbqfb").when_present.click
 end
 
 Then(/^I should see some results$/) do

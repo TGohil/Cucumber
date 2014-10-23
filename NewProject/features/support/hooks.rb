@@ -1,15 +1,15 @@
-b = Watir::Browser.new :firefox
+browser = Watir::Browser.new :firefox
 
 
 Before do
-  @b = b
+  @boo = browser
 end
 
 After do
   
 end
 
-at_exit do
-	
-  b.close
-end
+#at_exit do
+#	
+#  @boo.close
+#end
